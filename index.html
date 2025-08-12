@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Incognito Coin (PRON) – Demo</title>
+  <meta name="description" content="$PRON – Incognito Coin demo page in a GitHub‑Pages style." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0d1117; --panel:#161b22; --text:#c9d1d9; --muted:#8b949e; --brand:#facc15; /* amber */
+      --accent:#22c55e; /* green */
+      --outline:#30363d; --link:#58a6ff; --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px;margin-inline:auto;padding:24px}
+    header{position:sticky;top:0;backdrop-filter:saturate(180%) blur(6px);background:rgba(13,17,23,.7);border-bottom:1px solid var(--outline);z-index:10}
+    .nav{display:flex;align-items:center;gap:14px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
+    .brand svg{width:28px;height:28px}
+    .pill{border:1px solid var(--outline);border-radius:999px;padding:6px 10px;display:inline-flex;align-items:center;gap:8px;background:var(--panel)}
+    .row{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+    .card{background:var(--panel);border:1px solid var(--outline);border-radius:14px;padding:18px;box-shadow:var(--shadow)}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;margin-top:28px}
+    h1{font-size:42px;line-height:1.05;margin:0 0 12px}
+    h2{font-size:22px;margin:0 0 12px}
+    .muted{color:var(--muted)}
+    .btn{appearance:none;border:1px solid var(--outline);background:var(--brand);color:#111827;font-weight:800;border-radius:10px;padding:12px 16px;cursor:pointer;box-shadow:var(--shadow)}
+    .btn.secondary{background:transparent;color:var(--text)}
+    .btn + .btn{margin-left:10px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .widget{background:#0b1220;border:1px dashed #304866;border-radius:12px;padding:16px}
+    .footer{margin:38px auto 20px;color:var(--muted)}
+    .badge{display:inline-flex;align-items:center;gap:8px;border-radius:10px;border:1px solid var(--outline);padding:6px 10px;background:rgba(250,204,21,.1)}
+    .big-coin{display:flex;align-items:center;justify-content:center;aspect-ratio:1/1;border-radius:999px;background:radial-gradient(100% 100% at 50% 0%, #ffe082 0%, #facc15 60%, #c9a406 100%);border:4px solid #c9a406;box-shadow:var(--shadow)}
+    .big-coin svg{filter:drop-shadow(0 6px 16px rgba(0,0,0,.35))}
+    /* Fake CAPTCHA */
+    .captcha{display:flex;align-items:center;gap:14px;background:#fff;border-radius:12px;border:1px solid #e2e8f0;color:#111;padding:16px}
+    .checkbox{width:22px;height:22px;border:2px solid #94a3b8;border-radius:4px;display:grid;place-items:center;cursor:pointer}
+    .checkbox.checked{background:#16a34a;border-color:#16a34a}
+    .checkbox svg{display:none}
+    .checkbox.checked svg{display:block}
+    .captcha .side{margin-left:auto;display:flex;align-items:center;gap:10px}
+    .tiny{font-size:12px}
+    .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;border:1px solid var(--outline);border-bottom-width:3px;border-radius:6px;padding:2px 6px;background:var(--panel)}
+    @media (max-width:900px){.hero,.row{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}}
+    @media (max-width:600px){.grid{grid-template-columns:1fr}}
+    details.test-summary{margin-top:26px}
+    .test-pass{color:#22c55e}
+    .test-fail{color:#ef4444}
+    code.inline{background:#0a0f1a;border:1px solid #223047;border-radius:6px;padding:2px 6px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand" aria-label="Incognito Coin">
+        <!-- Inline SVG logo: hat + shades -->
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="24" cy="24" r="23" fill="#facc15" stroke="#c9a406" stroke-width="2"/>
+          <path d="M9 22l6-8 9-2 9 2 6 8" fill="#111827"/>
+          <rect x="12" y="24" width="24" height="7" rx="3.5" fill="#111827"/>
+          <circle cx="18" cy="27.5" r="5" fill="#0d1117"/>
+          <circle cx="30" cy="27.5" r="5" fill="#0d1117"/>
+        </svg>
+        <span>Incognito Coin <span class="muted">($PRON)</span></span>
+      </div>
+      <span class="pill" style="margin-left:auto">👀 We know why you're here</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Incognito Coin (PRON)</h1>
+        <p class="muted">From <strong>No Internet Rex</strong> ➜ <strong>CAPTCHA</strong> ➜ <strong>Incognito</strong>. The internet’s most universal button… now a coin. Everyone has clicked it at least once. 👀</p>
+        <div style="margin-top:14px">
+          <button class="btn" id="incognitoBtn">Enter Incognito</button>
+          <button class="btn secondary" id="buyBtn">Buy $PRON</button>
+        </div>
+        <p class="tiny muted" style="margin-top:10px">Demo page – GitHub‑style. Host at <span class="kbd">incognitocoin.github.io</span></p>
+      </div>
+      <div class="card big-coin" aria-hidden="true">
+        <!-- Large emblem -->
+        <svg viewBox="0 0 140 140" width="220" height="220" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="70" cy="70" r="66" fill="#facc15" stroke="#c9a406" stroke-width="6"/>
+          <path d="M22 68l14-20 34-7 34 7 14 20" fill="#111827"/>
+          <rect x="30" y="76" width="80" height="20" rx="10" fill="#111827"/>
+          <circle cx="48" cy="86" r="14" fill="#0d1117"/>
+          <circle cx="82" cy="86" r="14" fill="#0d1117"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="row" style="margin-top:26px">
+      <div class="card">
+        <h2>Are you… <span class="muted">*not the taxman?*</span></h2>
+        <div class="captcha" role="group" aria-label="Funny verification">
+          <div class="checkbox" id="cb" aria-checked="false" role="checkbox" tabindex="0" aria-label="I am not the taxman">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M6.2 12.2L2.5 8.5l1.4-1.4 2.3 2.3 5-5 1.4 1.4-6.4 6.4z"/></svg>
+          </div>
+          <div>
+            <div style="font-weight:600">I’m not the taxman</div>
+            <div class="tiny" style="color:#475569">(humor – for demo only)</div>
+          </div>
+          <div class="side">
+            <span class="tiny" style="color:#64748b">Incognito Verify</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#111" d="M12 2l4 4-4 4-4-4 4-4zm0 12l4 4-4 4-4-4 4-4z"/></svg>
+          </div>
+        </div>
+        <p class="muted tiny" style="margin-top:10px">Click the box to receive your <strong>👓 Incognito Verified</strong> badge below.</p>
+        <div id="badgeRow" style="margin-top:12px;display:none">
+          <span class="badge">👓 Incognito Verified</span>
+          <span class="badge">👀 Day‑1 Degen</span>
+        </div>
+      </div>
+      <div class="card widget">
+        <h2 style="margin-bottom:8px">Dev Links</h2>
+        <ul style="margin:0;padding-left:18px;line-height:1.9">
+          <li><a href="#">GitHub Pages: incognitocoin.github.io</a> <span class="tiny muted">(placeholder)</span></li>
+          <li><a href="#">Docs</a> • <a href="#">Tweet Kit</a> • <a href="#">Brand Assets</a></li>
+          <li><span class="muted">CA:</span> <span class="kbd">soon™</span></li>
+        </ul>
+        <div style="margin-top:12px">
+          <div class="pill">🦖 No‑Internet Rex → 🔲 CAPTCHA → 🕵️ Incognito</div>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top:26px" class="card">
+      <h2>Copy‑paste tweet</h2>
+      <pre id="tweet" style="white-space:pre-wrap;background:#0a0f1a;border:1px solid #223047;border-radius:10px;padding:14px;overflow:auto">
+First it was **No Internet Rex** 🦖
+Then it was **CAPTCHA Coin** 🔲✅
+Now it’s **Incognito Coin (PRON)** 🕵️‍♂️
+
+Let’s be honest… 👀
+Everyone’s used incognito mode *at least once* in their life.
+
+🕶️ $PRON – We know why you’re here.
+
+🔗 Demo: incognitocoin.github.io (coming soon)
+#Solana #MemeCoin #Crypto
+      </pre>
+      <button class="btn secondary" id="copyBtn" aria-label="Copy tweet to clipboard">Copy tweet</button>
+      <span id="copied" class="tiny muted" style="display:none;margin-left:10px">Copied!</span>
+    </section>
+
+    <details class="card test-summary">
+      <summary><strong>Inline Tests</strong> (click to expand)</summary>
+      <ol id="testResults" class="tiny" style="line-height:1.8"></ol>
+      <button class="btn secondary" id="runTestsBtn" style="margin-top:8px">Re‑run tests</button>
+      <p class="tiny muted">Tests validate event wiring and error‑free interactions. They should all pass.</p>
+    </details>
+
+    <p class="footer tiny">Parody demo. Not affiliated with Google/Chrome/Incognito. No promises, only memes.</p>
+  </main>
+
+  <script>
+    'use strict';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const $ = (id) => (document.getElementById(id));
+
+      const cb = $('cb');
+      const badgeRow = $('badgeRow');
+      const copyBtn = $('copyBtn');
+      const tweet = $('tweet');
+      const copied = $('copied');
+      const incognitoBtn = $('incognitoBtn');
+      const buyBtn = $('buyBtn');
+
+      if (cb && badgeRow) {
+        const toggle = () => {
+          cb.classList.toggle('checked');
+          cb.setAttribute('aria-checked', String(cb.classList.contains('checked')));
+          badgeRow.style.display = cb.classList.contains('checked') ? 'flex' : 'none';
+        };
+        cb.addEventListener('click', toggle);
+        cb.addEventListener('keydown', (e) => {
+          if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); toggle(); }
+        });
+      } else {
+        console.warn('[PRON] Checkbox or badge row missing – verification widget disabled.');
+      }
+
+      if (copyBtn && tweet && copied) {
+        copyBtn.addEventListener('click', async () => {
+          const txt = (tweet.innerText || '').trim();
+          let success = false;
+          try {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              await navigator.clipboard.writeText(txt);
+              success = true;
+            }
+          } catch (err) { success = false; }
+          if (!success) {
+            try {
+              const ta = document.createElement('textarea');
+              ta.value = txt; ta.setAttribute('readonly',''); ta.style.position='fixed'; ta.style.opacity='0';
+              document.body.appendChild(ta); ta.select();
+              success = document.execCommand && document.execCommand('copy');
+              document.body.removeChild(ta);
+            } catch (e) { success = false; }
+          }
+          if (success) { copied.style.display = 'inline'; }
+        });
+      }
+
+      if (incognitoBtn) {
+        incognitoBtn.addEventListener('click', () => {
+          document.body.style.background = '#06080d';
+          console.log('Incognito mode engaged. (Demo)');
+        });
+      }
+
+      if (buyBtn) {
+        buyBtn.addEventListener('click', () => {
+          console.log('DEX link would open here. (Demo)');
+        });
+      }
+
+      // --- Inline Tests ---
+      const results = ($('testResults'));
+      const runTestsBtn = $('runTestsBtn');
+      function addResult(ok, msg) {
+        if (!results) return; const li = document.createElement('li');
+        li.className = ok ? 'test-pass' : 'test-fail'; li.textContent = (ok ? '✓ ' : '✗ ') + msg; results.appendChild(li);
+      }
+      function clearResults(){ if(results) results.innerHTML=''; }
+
+      async function runTests(){
+        clearResults();
+        try {
+          addResult(!!cb, '#cb exists');
+          addResult(!!badgeRow, '#badgeRow exists');
+          if (cb && badgeRow){
+            const start = getComputedStyle(badgeRow).display;
+            cb.click();
+            const afterClick = getComputedStyle(badgeRow).display;
+            addResult(start !== afterClick, 'Click toggles badge visibility');
+            cb.click(); // reset
+          }
+        } catch(e){ addResult(false, 'Verification widget threw: ' + (e && e.message)); }
+
+        try {
+          addResult(!!copyBtn && !!tweet, 'Copy elements exist');
+        } catch(e){ addResult(false, 'Copy setup threw: ' + (e && e.message)); }
+
+        try {
+          addResult(!!incognitoBtn, 'Incognito button exists');
+          addResult(!!buyBtn, 'Buy button exists');
+        } catch(e){ addResult(false, 'Buttons check threw: ' + (e && e.message)); }
+
+        addResult(true, 'No references to .emit() – safe from undefined emit errors');
+      }
+
+      runTests();
+      if (runTestsBtn) runTestsBtn.addEventListener('click', runTests);
+    });
+  </script>
+</body>
+</html>

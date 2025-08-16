@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fish Ranking</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="#" class="brand">Draw A Fish (Remix)</a>
+      <div class="spacer"></div>
+      <a href="#" class="nav-link">draw</a>
+      <a href="#" class="nav-link">tank</a>
+      <a href="#" class="nav-link active">rankings</a>
+      <a href="#" class="nav-link">profile</a>
+      <a href="#" class="nav-link">my tanks</a>
+      <a href="#" class="button">login</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Fish Ranking</h1>
+    <div class="controls">
+      <button id="sortHot" class="chip">Sort by Hot</button>
+      <button id="sortScore" class="chip">Sort by Score</button>
+      <button id="sortDate" class="chip">Sort by Date</button>
+      <button id="sortRandom" class="chip">Random Order</button>
+    </div>
+
+    <div id="status" class="status">Loading fish…</div>
+    <section id="fish-list" class="grid"></section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="muted">
+      Clean-room remake for demo purposes. Replace content, colors, and copy with your own.
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
